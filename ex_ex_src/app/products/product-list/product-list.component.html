@@ -1,0 +1,50 @@
+<h2>Lista della spesa:</h2>
+<p>{{ oggi | date:"fullDate" }}</p>
+
+<!-- Mostra la data corrente formattata come "fullDate" -->
+<!-- Ad esempio, "venerdì 30 settembre 2023" -->
+
+<ul>
+    <!-- Itera attraverso gli elementi dell'array 'products' e crea un elemento <li> per ciascun prodotto -->
+    <!-- Il *ngFor è una direttiva Angular che itera attraverso un array -->
+    <!-- 'product' è una variabile temporanea che rappresenta ogni elemento nell'array 'products' -->
+    <!-- 'a' è l'indice dell'elemento nell'array -->
+
+    <li *ngFor="let product of products | sort; let a=index" (click)="selectedProduct = product">
+        <!-- Mostra il numero dell'elemento, il nome del prodotto e il prezzo in formato Euro -->
+        {{(a+1) + ". " + product.name + " " + (product.price | currency:"EUR")}}
+    </li>
+</ul>
+
+<app-product-detail
+    *ngIf="selectedProduct; else nessunProdotto"
+    [id] = "selectedProduct.id"
+    #ciccio
+    (bought)="onBuy($event)">
+</app-product-detail>
+
+<!-- Utilizza 'app-product-detail' per visualizzare i dettagli del prodotto selezionato -->
+<!-- 'selectedProduct' è una variabile che contiene il prodotto selezionato -->
+<!-- 'ngIf' mostra il dettaglio del prodotto solo se 'selectedProduct' è definito -->
+<!-- 'else nessunProdotto' mostra un messaggio se nessun prodotto è selezionato -->
+
+<ng-template #nessunProdotto>
+    <!-- Questo è il messaggio mostrato quando nessun prodotto è selezionato -->
+    <p>Nessun prodotto selezionato.</p>
+</ng-template>
+
+<!-- 
+<h3>Offerte:</h3>
+<ng-template appProductOffer [productList]="this"></ng-template>
+<h3>I miei prodotti preferiti</h3>
+ <app-favorite-products></app-favorite-products> 
+<app-favorite-products [products]="products"></app-favorite-products> 
+-->
+
+<!-- Queste parti del codice sembrano essere commentate, quindi non sono attualmente in uso nell'applicazione -->
+
+<!-- <h3>Offerte:</h3>
+<ng-template appProductOffer [productList]="this"></ng-template>
+<h3>I miei prodotti preferiti</h3>
+ <app-favorite-products></app-favorite-products> 
+<app-favorite-products [products]="products"></app-favorite-products> -->

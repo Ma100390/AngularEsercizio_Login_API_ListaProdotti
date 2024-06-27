@@ -1,0 +1,19 @@
+<h2>Lista della spesa:</h2>
+<p>{{ oggi | date:"fullDate" }}</p>
+<ul>
+    <li *ngFor="let product of products | sort; let a=index" (click)="selectedProduct = product">{{(a+1) + ". " + product.name + " " + (product.price | currency:"EUR")}}</li>
+</ul>
+<app-product-detail
+    *ngIf="selectedProduct; else nessunProdotto"
+    [id] = "selectedProduct.id"
+    #ciccio
+    (bought)="onBuy($event)">
+</app-product-detail>
+<ng-template #nessunProdotto>
+    <p>Nessun prodotto selezionato.</p>
+</ng-template>
+<!-- <h3>Offerte:</h3>
+<ng-template appProductOffer [productList]="this"></ng-template>
+<h3>I miei prodotti preferiti</h3> -->
+<!-- <app-favorite-products></app-favorite-products> -->
+<!-- <app-favorite-products [products]="products"></app-favorite-products> -->

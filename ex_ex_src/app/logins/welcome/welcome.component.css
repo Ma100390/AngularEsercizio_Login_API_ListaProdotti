@@ -1,0 +1,11 @@
+.welcomeSection {
+    display: flex;
+    flex-direction: row;
+    background-color: #666;
+    padding: 5%;
+    margin: 5%;
+}
+
+.welcomeSection > p {
+    color: #FFF;
+}

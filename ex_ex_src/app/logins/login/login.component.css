@@ -1,0 +1,13 @@
+.loginSection {
+    display: flex;
+    flex-direction: row;
+    background-color: #666;
+    padding: 5%;
+    margin: 5%;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}

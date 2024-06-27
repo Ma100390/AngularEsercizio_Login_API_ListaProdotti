@@ -1,0 +1,38 @@
+<!-- <h2>Ehilà!</h2> -->
+<app-login *ngIf="!isLogged" (logged)="onLogged($event)" />
+
+<!-- 
+<app-login>: Questo è un componente personalizzato definito nell'applicazione Angular. 
+In Angular, i componenti sono blocchi di costruzione fondamentali per creare interfacce utente. 
+<app-login> sembra essere un componente che rappresenta un modulo di accesso o di login all'interno dell'applicazione.
+*ngIf="!isLogged": Questo è un'istruzione strutturale in Angular. L'asterisco *ngIf viene utilizzato 
+per condizionalmente renderizzare o nascondere un elemento HTML in base a una condizione specificata. 
+Nel tuo caso, il componente <app-login> verrà visualizzato solo se la variabile isLogged è falsa.
+Questo significa che il modulo di accesso o di login sarà visibile solo quando l'utente non è autenticato 
+(quando isLogged è false).
+(logged)="onLogged($event)": Questo è un evento in Angular.
+Gli eventi vengono emessi da componenti quando si verifica un'azione specifica,
+e possono essere catturati e gestiti in altri luoghi dell'applicazione. Nel tuo caso,
+il componente <app-login> emette un evento chiamato "logged" quando qualcosa di significativo 
+avviene all'interno del modulo di accesso o di login. Quando questo evento viene emesso, 
+verrà chiamato il metodo onLogged($event). Il parametro $event conterrà eventuali dati associati all'evento.
+In sintesi, questo codice rappresenta un componente personalizzato di accesso
+o di login all'interno di un'applicazione Angular. Il componente sarà visibile 
+solo quando l'utente non è autenticato (isLogged è false), e quando l'utente compie azioni
+significative all'interno del componente (ad esempio, completa l'accesso), verrà emesso
+un evento "logged" che può essere gestito da un metodo chiamato onLogged($event).
+ -->
+
+
+
+
+
+
+
+
+
+<app-welcome *ngIf="isLogged"></app-welcome>
+
+<app-logout *ngIf="isLogged" (logged)="onLoggedOut()"></app-logout>
+<app-product-list *ngIf="isLogged"></app-product-list>
+<!-- <div appCustomClock></div> -->

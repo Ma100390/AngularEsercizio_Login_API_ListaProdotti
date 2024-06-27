@@ -1,0 +1,43 @@
+<!-- <div *ngIf="product$ | async as product">
+    <h2>Dettaglio del prodotto</h2>
+    <h3>{{ product?.name | uppercase}}</h3>
+    <span>{{ product?.price | currency:"EUR" }}</span>
+    <img [src]="product?.image" width="200px" height="200px">
+    <p>
+        <button (click)="buy()">Acquista ora!</button>
+    </p>
+
+
+</div>
+Questo è un frammento di codice HTML all'interno del template del componente ProductDetailComponent.
+ Ecco una spiegazione di cosa fa questo codice:
+<div *ngIf="product">: Questo è un'istruzione condizionale Angular (*ngIf) che verifica se product esiste e non è nullo.
+     Se è vero, il contenuto all'interno di questo <div> verrà visualizzato, altrimenti verrà nascosto.
+<h2>Dettaglio del prodotto.</h2>: Questo è un titolo di livello 2 che mostra il testo "Dettaglio del prodotto."
+<h3>{{product.name | uppercase}}</h3>: Questo mostra il nome del prodotto in maiuscolo.
+ Il nome del prodotto è ottenuto dalla variabile product e viene convertito in maiuscolo utilizzando il filtro uppercase.
+<span>{{product.price | currency:"EUR"}}</span>: Questo mostra il prezzo del prodotto formattato 
+come una stringa di valuta in euro. Il prezzo del prodotto è ottenuto dalla variabile product e viene 
+formattato usando il filtro currency.
+<img [src]="product.image" width="200px" height="200px">: Questo è un tag <img> che mostra un'immagine 
+del prodotto. L'attributo src ottiene l'URL dell'immagine dal campo image della variabile product. Inoltre, vengono specificate le dimensioni dell'immagine come larghezza e altezza.
+<button (click)="buy(product)">Acquista ora!</button>: Questo è un pulsante "Acquista ora!" che attiva
+ l'evento (click) quando viene cliccato. Quando il pulsante viene cliccato, viene chiamata 
+ la funzione buy(product) con il prodotto come argomento. Questo permette di eseguire un'azione quando 
+ il pulsante viene premuto, ad esempio l'acquisto del prodotto.
+In generale, questo codice rappresenta la visualizzazione dei dettagli di un prodotto, inclusi il nome, 
+il prezzo e un'immagine, insieme a un pulsante per l'acquisto del prodotto.
+                        |
+                        |
+\||\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+-->
+
+<div *ngIf="product">
+    <h2>Dettaglio del prodotto.</h2>
+    <h3>{{product.name | uppercase}}</h3>
+    <span>{{product.price | currency:"EUR"}}</span>
+    <img [src]="product.image" width="200px" height="200px">
+    <p>
+        <button (click)="buy(product)">Acquista ora!</button>
+    </p>
+</div>

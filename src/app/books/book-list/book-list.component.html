@@ -1,0 +1,5 @@
+<h2>Lista dei libri:</h2>
+<ul>
+    <li *ngFor="let book of books; let a=index" (click)="setSelectedBookTitle(book.title)">{{(a+1) + ". " + book.title + " " + (book.publishDate)}}</li>
+</ul>
+<app-book-detail></app-book-detail>

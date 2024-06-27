@@ -1,0 +1,16 @@
+.reddish {
+    background-color: pink;
+    border: 1px solid red
+}
+
+.fattish {
+    padding: 10px;
+}
+
+.rounded {
+    border-radius: 25px;
+}
+
+h2 {
+    border: 8px dashed blue;
+}

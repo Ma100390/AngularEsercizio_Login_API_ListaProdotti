@@ -1,0 +1,19 @@
+<!-- <div *ngIf="product$ | async as product">
+    <h2>Dettaglio del prodotto</h2>
+    <h3>{{ product?.name | uppercase}}</h3>
+    <span>{{ product?.price | currency:"EUR" }}</span>
+    <img [src]="product?.image" width="200px" height="200px">
+    <p>
+        <button (click)="buy()">Acquista ora!</button>
+    </p>
+</div> -->
+
+<div *ngIf="product">
+    <h2>Dettaglio del prodotto.</h2>
+    <h3>{{product.name | uppercase}}</h3>
+    <span>{{product.price | currency:"EUR"}}</span>
+    <img [src]="product.image" width="200px" height="200px">
+    <p>
+        <button (click)="buy(product)">Acquista ora!</button>
+    </p>
+</div>

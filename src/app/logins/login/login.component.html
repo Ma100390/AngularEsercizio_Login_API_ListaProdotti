@@ -1,0 +1,11 @@
+<section class="loginSection">
+    <form class="loginForm" (ngSubmit)="submit()">
+        <input type="text" id="uname" name="uname" placeholder="Nome Utente" size="15" required
+            value="" [(ngModel)]="userName" />
+
+        <input type="password" id="password" name="password" placeholder="Password" size="15" required
+            value="" [(ngModel)]="password"/>
+
+        <input type="submit" value="Login" />
+    </form>
+</section>

@@ -1,0 +1,7 @@
+<!-- <h2>Ehilà!</h2> -->
+<app-login *ngIf="!isLogged" (logged)="onLogged($event)"/>
+<app-welcome *ngIf="isLogged"></app-welcome>
+<app-logout *ngIf="isLogged" (logged)="onLoggedOut()"></app-logout>
+<app-product-list *ngIf="isLogged"></app-product-list> 
+<app-book-list *ngIf="!isLogged"></app-book-list>
+<div appCustomClock></div> 
