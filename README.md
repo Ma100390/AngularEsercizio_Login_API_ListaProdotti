@@ -1,3 +1,10 @@
+# Realizzazione di un progetto angular con l'implemendatazione del token JWC più collegamento a 
+# https://fakerestapi.azurewebsites.net/index.html
+# Argomenti trattati sono:
+# I servizi, login, JWC, Pipe, lista prodotti, prodotto singolo, API Rest
+
+
+
 # LezioneJwt
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.1.
